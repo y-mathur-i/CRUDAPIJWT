@@ -1,0 +1,88 @@
+# user 1
+# POST http://localhost:5000/api/user/register
+# Content-Type:application/json
+
+# {   "name":"yogesh",
+#     "email":"yogesh@gmail.com",
+#     "password":"12345678"
+# }
+# user 2
+# POST http://localhost:5000/api/user/register
+# Content-Type:application/json
+
+# {   "name":"mohitmathur",
+#     "email":"mohit@gmail.com",
+#     "password":"87654321"
+# }
+
+# user 1 login
+# POST http://localhost:5000/api/user/login
+# Content-Type: application/json
+
+# {
+    
+#     "password":"12345678",
+#     "email": "yogesh@gmail.com"
+# }
+
+# user 2 login
+# POST http://localhost:5000/api/user/login
+# Content-Type: application/json
+
+# {
+    
+#     "password":"87654321",
+#     "email": "mohit@gmail.com"
+# }
+
+# user 1 auth token
+# auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDEwOTQzMTk5MDhhYjIzZWM3YzU2ZjAiLCJpYXQiOjE2MTE3Nzk3ODh9.77F3839xr80rgyeM2_k9y4Eoz3fPwChZLtoSkN2T4Qs
+# user 2 auth token
+# auth-token :eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDExZDNkMGI1ZDRjNDI5OTgxMzkzNjciLCJpYXQiOjE2MTE3ODExMzh9.LRjCuagvfjA28OtMbyiBXx9WwEjY5QL7SvAl1XAulvo
+
+# GET http://localhost:5000/api/post/get
+# auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDEwOTQzMTk5MDhhYjIzZWM3YzU2ZjAiLCJpYXQiOjE2MTE3Nzk3ODh9.77F3839xr80rgyeM2_k9y4Eoz3fPwChZLtoSkN2T4Qs
+
+
+# adding post
+# POST http://localhost:5000/api/post/add
+# auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDEwOTQzMTk5MDhhYjIzZWM3YzU2ZjAiLCJpYXQiOjE2MTE3Nzk3ODh9.77F3839xr80rgyeM2_k9y4Eoz3fPwChZLtoSkN2T4Qs
+# Content-Type: application/json
+
+# {
+#     "text": "this is the  post using user one to be updated"
+# }
+
+
+# to get posts from a specific user
+# GET http://localhost:5000/api/post/user
+
+# get a specific post using posts id
+# GET http://localhost:5000/api/post/post 
+# auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDEwOTQzMTk5MDhhYjIzZWM3YzU2ZjAiLCJpYXQiOjE2MTE3Nzk3ODh9.77F3839xr80rgyeM2_k9y4Eoz3fPwChZLtoSkN2T4Qs
+# Content-Type: application/json
+
+# {
+#     "postId":"6011d582bb78e83d00c796c1"
+# }
+
+# DELETE http://localhost:5000/api/post/post
+# auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDEwOTQzMTk5MDhhYjIzZWM3YzU2ZjAiLCJpYXQiOjE2MTE3Nzk3ODh9.77F3839xr80rgyeM2_k9y4Eoz3fPwChZLtoSkN2T4Qs
+# Content-Type: application/json
+
+# {
+#     "postId":"6011d582bb78e83d00c796c1"
+# }
+
+
+# PUT http://localhost:5000/api/post/post
+# auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MDEwOTQzMTk5MDhhYjIzZWM3YzU2ZjAiLCJpYXQiOjE2MTE3Nzk3ODh9.77F3839xr80rgyeM2_k9y4Eoz3fPwChZLtoSkN2T4Qs
+# Content-Type: application/json
+
+# {
+#     "postId":"6011dc20a1c9a70968731c1e",
+#     "text":"updated"
+# }
+
+
+
